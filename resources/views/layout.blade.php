@@ -50,7 +50,6 @@
         </form>
     @endauth --}}
 
-    <hr>
 
     <!-- This is where each page will inject its content -->
     @yield('content')

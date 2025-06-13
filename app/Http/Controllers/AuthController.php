@@ -11,6 +11,9 @@ use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
+    public function landing() {
+        return view('landing');
+    }
     // Show register form
     public function showRegister() {
         return view('authenticated.register');
@@ -42,6 +45,7 @@ class AuthController extends Controller
     public function showLogin() {
         return view('authenticated.login');
     }
+
 
     // Handle login
     public function login(Request $request) {

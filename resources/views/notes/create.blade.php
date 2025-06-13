@@ -3,8 +3,7 @@
 @extends('layout')
 
 @section('content')
-<body class="main-bg">
-    <div class="w-full h-full">
+    <div class="w-full h-full main-bg">
 
         
     <header class="w-full sticky top-0 z-50 bg-white shadow-md px-6 py-5 flex items-center justify-between">
@@ -68,5 +67,4 @@
         </div>
 
     </div>
-</body>    
 @endsection

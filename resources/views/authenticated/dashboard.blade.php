@@ -3,14 +3,16 @@
 
 @section('content')
 
-<body class="main-bg">
-<div class="w-full h-full">
+<div class="w-full h-full main-bg ">
 
 <header class="sticky top-0 z-50 bg-white shadow-md px-6 py-5 flex items-center justify-between">
     <a class="text-4xl font-extrabold bg-gradient-to-r from-pink-500 via-blue-500 to-yellow-500 bg-clip-text text-transparent custom-animate"
         href="{{ route('notes.index') }}" >    Re:Note౨
     </a>
 
+    
+   <div class="flex gap-5"> <h1 class="text-xl"> Welcome</h1> <h1 class="text-xl text-purple-700">{{auth()->user()->name}}</h1></div>
+    
     <nav class="space-x-4 flex">
 
     <a href="{{ route('notes.create') }}"
@@ -40,7 +42,7 @@
         x-transition:leave="transition ease-in duration-300"
         x-transition:leave-start="opacity-100 translate-y-0"
         x-transition:leave-end="opacity-0 translate-y-2"
-        class="fixed top-5 left-auto right-auto  justify-center bg-green-100 border border-green-400 text-green-800 px-6 py-3 rounded-lg shadow-lg z-50"
+        class="fixed top-5 left-[90vh]  bg-green-100 border border-green-400 text-green-800 px-6 py-3 rounded-lg shadow-lg z-50"
     >
         {{ session('success') }}
     </div>
@@ -84,8 +86,9 @@
 
         </div>
     @empty
+    <div  class="text-white text-2xl font-semibold mt-[30vh]">
         <p>No notes yet. Create one!</p>
+    </div>
     @endforelse
 </div>
-</body>
     @endsection

@@ -4,9 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\NoteController;
 
-Route::get('/', function() {
-    return view('welcome');
-});
+Route::redirect('/', '/ReNote');
+Route::get('/ReNote', [AuthController::class, 'landing'])->name('landing');
+
 
 // Register
 

@@ -7,7 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Register</title>
 </head>
-<body class="main-bg ">
+<body >
+<div class="main-bg w-full h-full">
+    <div class="flex justify-center mt-[15vh]">
 
     <div class="card-color flex flex-row min-w-[400px] h-auto rounded-3xl overflow-hidden pb-3" >
         <div class="flex flex-1 flex-col p-5 items-center">
@@ -69,7 +71,8 @@
 
             <p class="text-sm">Already have an account? <a href="{{ route('login') }}" class="text-blue-500">Login here</a>.</p>
         </div>
-           
+    </div>
+    </div>
     </div>        
 </body>
 </html>

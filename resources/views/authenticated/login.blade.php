@@ -9,9 +9,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
 </head>
-<body class="main-bg ">
+<body >
+<div class="main-bg w-full h-full">
+    <div class="flex justify-center mt-[20vh]">
 
-    <div class="card-color flex flex-row min-w-[400px] h-auto rounded-3xl overflow-hidden pb-3" >
+    <div class="card-color flex flex-row min-w-[400px] h-[350px] rounded-3xl overflow-hidden pb-3" >
             <div class="flex flex-1 flex-col p-5 items-center">
 
            <h2 class="text-2xl font-extrabold mb-2 text-pink-500">Login</h2>
@@ -60,7 +62,9 @@
                 </div>
             </form>
 
-            <p class="text-sm">>Don't have an account? <a href="{{ route('register') }}" class="text-pink-500">Register here</a>.</p>
-    </div>        
+            <p class="text-sm">Don't have an account? <a href="{{ route('register') }}" class="text-pink-500">Register here</a>.</p>
+    </div>  
+    </div>
+    </div>     
 </body>
 </html>
