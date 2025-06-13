@@ -6,9 +6,9 @@
 <body class="main-bg">
 <div class="w-full h-full">
     <header class="sticky top-0 z-50 bg-white shadow-md px-6 py-5 flex items-center justify-between">
-    <h1 class="text-4xl font-extrabold bg-gradient-to-r from-pink-500 via-blue-500 to-yellow-500 bg-clip-text text-transparent custom-animate">
-    Re:Note౨
-    </h1>
+    <a class="text-4xl font-extrabold bg-gradient-to-r from-pink-500 via-blue-500 to-yellow-500 bg-clip-text text-transparent custom-animate"
+        href="{{ route('notes.index') }}" >    Re:Note౨
+    </a>
 
 </header>
     <div class="flex justify-center p-5 gap-5 flex-wrap">

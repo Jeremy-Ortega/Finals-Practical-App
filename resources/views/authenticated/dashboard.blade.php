@@ -7,20 +7,19 @@
 <div class="w-full h-full">
 
 <header class="sticky top-0 z-50 bg-white shadow-md px-6 py-5 flex items-center justify-between">
-    <h1 class="text-4xl font-extrabold bg-gradient-to-r from-pink-500 via-blue-500 to-yellow-500 bg-clip-text text-transparent custom-animate">
-    Re:Note౨
-    </h1>
-
+    <a class="text-4xl font-extrabold bg-gradient-to-r from-pink-500 via-blue-500 to-yellow-500 bg-clip-text text-transparent custom-animate"
+        href="{{ route('notes.index') }}" >    Re:Note౨
+    </a>
 
     <nav class="space-x-4 flex">
 
     <a href="{{ route('notes.create') }}"
-    class="inline-block bg-blue-600 text-white font-semibold px-6 py-2 rounded-2xl shadow-md hover:bg-blue-700 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out">
-    + Create Note 
+    class="border-2  border-blue-600 inline-block bg-white font-semibold px-6 py-2 text-blue-600 rounded-2xl shadow-md hover:text-white hover:bg-blue-700 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out">
+    + Create Note
         </a>
                 <form action="{{ route('logout') }}" method="POST">
                 @csrf
-                    <button class="inline-block bg-pink-600 text-white font-semibold px-6 py-2 rounded-2xl shadow-md hover:bg-pink-700 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out">
+                    <button class="border-2  border-red-600 inline-block bg-white font-semibold px-6 py-2 text-red-600 rounded-2xl shadow-md hover:text-white hover:bg-red-700 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out">
                     Logout
                     </button>
                 </form>

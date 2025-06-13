@@ -8,9 +8,10 @@
 
         
     <header class="w-full sticky top-0 z-50 bg-white shadow-md px-6 py-5 flex items-center justify-between">
-        <h1 class="text-4xl font-extrabold bg-gradient-to-r from-pink-500 via-blue-500 to-yellow-500 bg-clip-text text-transparent custom-animate">
+        <a class="text-4xl font-extrabold bg-gradient-to-r from-pink-500 via-blue-500 to-yellow-500 bg-clip-text text-transparent custom-animate"
+        href="{{ route('notes.index') }}" >
         Re:Note౨
-        </h1>
+        </a>
     </header>
 
         <div class="w-full h-auto flex  justify-center items-center mt-10">
@@ -39,12 +40,12 @@
                             @csrf
                             <div class="flex flex-col justify-between text-left">
                             <label>Title:</label>
-                            <input type="text" name="title" value="{{ old('title') }}" class="p-1 border-2 border-purple-500 rounded-xl 
+                            <input type="text" name="title" value="{{ old('title') }}" required class="p-1 border-2 border-purple-500 rounded-xl 
                             focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-500"><br>
                             </div>
 
                             <label>Content:</label>
-                            <textarea name="body" rows="5" cols="40" class="p-1 border-2 border-purple-500 rounded-xl 
+                            <textarea name="body" rows="5" cols="40" required class="p-1 border-2 border-purple-500 rounded-xl 
                             focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-500">{{ old('body') }}</textarea><br>
 
                             {{-- buttons --}}
