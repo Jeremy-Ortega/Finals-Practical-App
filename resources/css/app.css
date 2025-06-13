@@ -1,11 +1,116 @@
 @import 'tailwindcss';
+@tailwind utilities;
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 @source '../**/*.blade.php';
 @source '../**/*.js';
 
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+
+
+
+*,
+*::before,
+*::after{
+  font-family: Geneva, Verdana, sans-serif;
+}
+
+
+.main-bg {
+  height: 100vh;
+  margin: 0;
+  animation: gradientShift 10s ease infinite;
+  background: linear-gradient(-45deg, #fff2be, #85baff, #f5a8a8, #6262ec);
+  background-size: 300% 300%;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.custom-animate {
+  background-size: 300% 300%;
+  animation: gradientShift 5s ease infinite;
+}
+
+.animate-gradientShift {
+  background-size: 300% 300%;
+  animation: gradientShift 6s ease infinite;
+}
+
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-color {
+    background-color: aliceblue;
+}
+
+.lavander {
+    background-color: rgb(127, 112, 246);
+}
+
+/* From Uiverse.io by xueyuantan */ 
+.custom-button {
+ background-color: #5265f6;
+ color:aliceblue;
+ width: 9em;
+ height: 3em;
+ border-radius: 30em;
+ font-size: 15px;
+ font-family: inherit;
+ border: none;
+ position: relative;
+ overflow: hidden;
+ z-index: 1;
+ box-shadow: 6px 6px 12px #a5a5a5,
+             -6px -6px 12px #ffffff;
+}
+
+.custom-button::before {
+
+ content: '';
+ width: 0;
+ height: 3em;
+ border-radius: 30em;
+ position: absolute;
+ top: 0;
+ left: 0;
+ background-image: linear-gradient(to right,  #ff85a4  0%,  #4676fa 100%);
+ transition: .5s ease;
+ display: block;
+ z-index: -1;
+}
+
+.custom-button:hover::before {
+ width: 9em;
+  color: #5265f6;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* Fade in transition (on page load) */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
